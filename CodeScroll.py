@@ -8,8 +8,8 @@ import time
 import sys
 from pygments import highlight
 from pygments.lexers import PythonLexer
-from pygments.lexers import CsharpLexer
-from pygments.lexers import JavaScriptLexer
+from pygments.lexers import CSharpLexer
+from pygments.lexers import JavascriptLexer
 from pygments.lexers import TextLexer
 from pygments.formatters import TerminalFormatter
 
@@ -23,7 +23,7 @@ class CodeScroll:
         self.files = os.listdir(self.path)
         if len(self.files) == 0:
             raise Exception("No files in Sources directory")
-        self.scrollSpeed = 10
+        self.scrollSpeed = 20
         self.transitionSpeed = 10
         self.fileContents = ""
         
@@ -49,9 +49,9 @@ class CodeScroll:
             if file.endswith(".py"):
                 self.fileContents = highlight(f.read(), PythonLexer(), TerminalFormatter())
             elif file.endswith(".cs"):
-                self.fileContents = highlight(f.read(), CsharpLexer(), TerminalFormatter())
+                self.fileContents = highlight(f.read(), CSharpLexer(), TerminalFormatter())
             elif file.endswith(".js"):
-                self.fileContents = highlight(f.read(), JavaScriptLexer(), TerminalFormatter())
+                self.fileContents = highlight(f.read(), JavascriptLexer(), TerminalFormatter())
             else:
                 self.fileContents = highlight(f.read(), TextLexer(), TerminalFormatter())
             
