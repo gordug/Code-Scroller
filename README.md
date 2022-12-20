@@ -2,6 +2,8 @@
 
 Program to output sourcefiles as though they were being typed, includes syntax highlighting.
 
+![Running Example](https://github.com/cj-traka/Code-Scroller/blob/main/CodeScroller2.gif?raw=true)
+
 Please feel free to add any nonsense source files to the sources repo, nothing is executed.
 I included this program's source already, though the original.
 
